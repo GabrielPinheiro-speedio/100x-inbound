@@ -4,8 +4,8 @@ from src.utils.logger import log_audit_event, logger
 
 router = APIRouter()
 
-@router.post("/enrich-cpf")
-async def enrich_cpf(request: Request, db=Depends(get_db), es=Depends(get_es)):
+@router.post("/search-person")
+async def search_person(request: Request, db=Depends(get_db), es=Depends(get_es)):
     """
     Verifica o funcionamento do Skeleton.
     """

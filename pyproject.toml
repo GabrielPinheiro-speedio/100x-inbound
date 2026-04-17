@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "100x-inbound-api"
+version = "0.1.0"
+description = "FastAPI backend"
+authors = ["User <user@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = {extras = ["all"], version = "^0.110.0"}
+motor = "^3.3.2"
+elasticsearch = {extras = ["async"], version = "^8.12.0"}
+loguru = "^0.7.2"
+pydantic-settings = "^2.2.1"
+uvicorn = "^0.27.1"
+python-dotenv = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
